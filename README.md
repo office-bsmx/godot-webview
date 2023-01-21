@@ -13,10 +13,17 @@ This feature will be added soon.
 2. Download the latest release, put *webbview.gdap* and *WebViewLibrary-release.aar* files into **[your_project_directory]/android/plugins**
 3.  Go to **Project Settings... -> AutoLoad** and add the *webview.gd* script to Node list, and set the node's name like *WebView*
 4. You are set to **GO!**
+
 ## Documentation
+!!! This plugin only works in Android export.
 You can open a URL in the WebView with this code:
 
 	func _ready():
 		WebView.open_webview("https://someurl.com")
+
+How to make it work:
+1. Go to **Export -> Android** and make sure **Use custom build** option is checked.
+2. Also, you have to enable the plugin by clicking **Web View Library** checkbox in the Plugin's list.
+
 To destroy the WebView just press the back button.
 Maybe in the future there will be some properties for changing the widget's behavior.
