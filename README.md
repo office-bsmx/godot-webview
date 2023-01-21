@@ -25,6 +25,7 @@ You can open a URL in the WebView with this code:
 ### How to make it work:
 1. Go to **Export -> Android** and make sure **Use custom build** option is checked.
 2. Also, you have to enable the plugin by clicking **Web View Library** checkbox in the Plugin's list.
+3. Target SDK Version must be set to Level >=32 (same as the compiled .aar library)
 
 To destroy the WebView just press the back button.
 Maybe in the future there will be some properties for changing the widget's behavior.
