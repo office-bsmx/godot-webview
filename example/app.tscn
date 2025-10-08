@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb3r7wjv1bfkc"]
+
+[ext_resource type="Script" uid="uid://d2ch80x0soymc" path="res://app.gd" id="1_j6dmo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6dmo"]
+content_margin_left = 10.0
+content_margin_top = 2.0
+content_margin_right = 10.0
+content_margin_bottom = 2.0
+bg_color = Color(0.18619251, 0.46668333, 0.61777115, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbwvd"]
+content_margin_left = 10.0
+content_margin_top = 2.0
+content_margin_right = 10.0
+content_margin_bottom = 2.0
+bg_color = Color(0.2276805, 0.5407905, 0.71199054, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j6dmo"]
+
+[node name="app" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j6dmo")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_j6dmo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j6dmo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qbwvd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_j6dmo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j6dmo")
+text = "Open WebView"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
